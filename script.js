@@ -1,13 +1,10 @@
 const textoOriginal = 
 
-`Um transtorno de aprendizagem não é um reflexo de inteligência ou potencial. 
-É apenas uma diferença na forma como o cérebro processa informações. 
+`Um transtorno de aprendizagem não é um reflexo de inteligência ou potencial. É apenas uma diferença na forma como o cérebro processa informações. 
 E essa diferença não diminui o valor, a criatividade ou a capacidade de realização de ninguém.
 
-Pessoas com dislexia, discalculia, disortografia ou outros transtornos de aprendizagem muitas vezes 
-desenvolvem habilidades incríveis em áreas como pensamento criativo, resolução de problemas, 
-comunicação verbal, inteligência emocional e perseverança. 
-Elas aprendem a enfrentar desafios desde cedo, o que as torna resilientes, empáticas e determinadas.`;
+Pessoas com dislexia, discalculia, disortografia ou outros transtornos de aprendizagem muitas vezes desenvolvem habilidades incríveis em áreas como pensamento criativo, resolução de problemas, 
+comunicação verbal, inteligência emocional e perseverança. Elas aprendem a enfrentar desafios desde cedo, o que as torna resilientes, empáticas e determinadas.`;
 
 function embaralharPalavra(palavra) {
   if (palavra.length <= 3) return palavra;
