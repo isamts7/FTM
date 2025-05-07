@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FTM NA PRAÇA</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .subtitulo {
+      font-size: 20px;
+      font-weight: normal;
+      color: white;
+      background-color: #0059b3;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .container {
+      padding: 30px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .texto-simulacao {
+      font-size: 20px;
+      line-height: 1.6;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .desafio {
+      font-size: 22px;
+      font-weight: bold;
+      background-color: #e0e0e0;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <header>FTM NA PRAÇA</header>
+  <div class="subtitulo">Stand de Psicologia</div>
+
+  <div class="container">
+    <div class="texto-simulacao" id="textoSimulado">
+      <!-- Texto disléxico aparece aqui -->
+    </div>
+
+    <div class="desafio">
+      <p><strong>Pergunta:</strong> <span id="pergunta"></span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
