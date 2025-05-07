@@ -1,12 +1,4 @@
-const textoOriginal = 
-
-`Um transtorno de aprendizagem não é um reflexo de inteligência ou potencial. 
-É apenas uma diferença na forma como o cérebro processa informações. 
-E essa diferença não diminui o valor, a criatividade ou a capacidade de realização de ninguém.
-
-Pessoas com dislexia, discalculia, disortografia ou outros transtornos de aprendizagem muitas vezes 
-desenvolvem habilidades incríveis em áreas como pensamento criativo, resolução de problemas, 
-comunicação verbal, inteligência emocional e perseverança. Elas aprendem a enfrentar desafios desde cedo, o que as torna resilientes, empáticas e determinadas.`;
+const textoOriginal = `Um transtorno de aprendizagem não é um reflexo de inteligência ou potencial. É apenas uma diferença na forma como o cérebro processa informações. E essa diferença não diminui o valor, a criatividade ou a capacidade de realização de ninguém. Pessoas com dislexia, discalculia, disortografia ou outros transtornos de aprendizagem muitas vezes desenvolvem habilidades incríveis em áreas como pensamento criativo, resolução de problemas, comunicação verbal, inteligência emocional e perseverança. Elas aprendem a enfrentar desafios desde cedo, o que as torna resilientes, empáticas e determinadas.`;
 
 function embaralharPalavra(palavra) {
   if (palavra.length <= 3) return palavra;
@@ -19,16 +11,15 @@ function embaralharPalavra(palavra) {
 }
 
 function simularDislexia(texto) {
-  return texto.split(' ').map(palavra => embaralharPalavra(palavra)).join(' ');a
+  return texto.split(' ').map(palavra => embaralharPalavra(palavra)).join(' ');
 }
 
 function atualizarTexto() {
   document.getElementById('textoSimulado').innerText = simularDislexia(textoOriginal);
 }
 
-setInterval(atualizarTexto, 1200); 
+setInterval(atualizarTexto, 1200);
 
-// Perguntas para o desafio
 const perguntas = [
   {
     texto: "O que é dislexia?",
@@ -50,8 +41,6 @@ function sortearPergunta() {
   const indice = Math.floor(Math.random() * perguntas.length);
   perguntaAtual = perguntas[indice];
   document.getElementById('pergunta').innerText = perguntaAtual.texto;
-
-  // Exibe apenas no console para o apresentador
   console.log("RESPOSTA:", perguntaAtual.resposta);
 }
 
