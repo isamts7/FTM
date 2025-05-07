@@ -1,13 +1,11 @@
 const textoOriginal = 
 
-`Um transtorno de aprendizagem não é um reflexo de inteligência ou potencial. É apenas uma diferença na forma como o cérebro processa informações. 
-E essa diferença não diminui o valor, a criatividade ou a capacidade de realização de ninguém.
+`Um transtorno de aprendizagem não é um reflexo de inteligência ou potencial. É apenas uma diferença na forma como o cérebro processa informações. E essa diferença não diminui o valor, a criatividade ou a capacidade de realização de ninguém.
 
-Pessoas com dislexia, discalculia, disortografia ou outros transtornos de aprendizagem muitas vezes desenvolvem habilidades incríveis em áreas como pensamento criativo, resolução de problemas, 
-comunicação verbal, inteligência emocional e perseverança. Elas aprendem a enfrentar desafios desde cedo, o que as torna resilientes, empáticas e determinadas.`;
+Pessoas com dislexia, discalculia, disortografia ou outros transtornos de aprendizagem muitas vezes desenvolvem habilidades incríveis em áreas como pensamento criativo, resolução de problemas, comunicação verbal, inteligência emocional e perseverança. Elas aprendem a enfrentar desafios desde cedo, o que as torna resilientes, empáticas e determinadas.`;
 
 function embaralharPalavra(palavra) {
-  if (palavra.length <= 3) return palavra;
+  if (palavra.length <= 2) return palavra;
   const letras = palavra.slice(1, -1).split('');
   for (let i = letras.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -17,14 +15,16 @@ function embaralharPalavra(palavra) {
 }
 
 function simularDislexia(texto) {
-  return texto.split(' ').map(palavra => embaralharPalavra(palavra)).join(' ');
+  return texto.split('\n').map(paragrafo => {
+    return paragrafo.split(' ').map(palavra => embaralharPalavra(palavra)).join(' ');
+  }).join('\n');
 }
 
 function atualizarTexto() {
   document.getElementById('textoSimulado').innerText = simularDislexia(textoOriginal);
 }
 
-setInterval(atualizarTexto, 1200); 
+setInterval(atualizarTexto, 400); 
 
 // Perguntas para o desafio
 const perguntas = [
