@@ -3,71 +3,86 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FTM NA PRAÇA</title>
+  <title>FTM na Praça</title>
   <style>
     body {
       font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #e0f7fa, #b3e5fc); /* Degradê suave azul claro */
+      background-image: url('https://www.transparenttextures.com/patterns/white-mesh.png'); /* Textura sutil de fundo */
+      background-size: cover;
+      background-position: center;
       margin: 0;
-      background-color: #f0f0f0;
-    }
-
-    header {
-      background-color: #004080;
-      color: white;
-      padding: 20px;
+      padding: 0;
       text-align: center;
-      font-size: 28px;
-      font-weight: bold;
     }
 
-    .subtitulo {
-      font-size: 20px;
-      font-weight: normal;
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center; /* Centraliza o conteúdo horizontalmente */
+      background: linear-gradient(to right, #0077cc, #00b3e6); /* Degradê para o título e subtítulo */
       color: white;
-      background-color: #0059b3;
+      padding: 30px 20px;
+    }
+
+    .logo-container {
+      background-color: #76c7edcf; /* Azul mais escuro para a logo */
       padding: 10px;
-      text-align: center;
+      border-radius: 10px;
+      margin-right: 20px; /* Espaço entre a logo e o título */
     }
 
-    .container {
-      padding: 30px;
-      max-width: 900px;
+    .logo-container img {
+      max-height: 80px;
+      display: block;
+    }
+
+    .header div {
+      text-align: center; /* Centraliza o texto do título e subtítulo */
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .header p {
+      margin: 10px 0 0;
+      font-size: 1.2rem;
+    }
+
+    .content {
+      padding: 30px 15px;
+    }
+
+    #textoSimulado {
+      max-width: 800px;
       margin: 0 auto;
-    }
-
-    .texto-simulacao {
-      font-size: 20px;
+      font-size: 1.1rem;
       line-height: 1.6;
-      background-color: white;
+      background: white;
       padding: 20px;
       border-radius: 10px;
-      margin-bottom: 30px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      white-space: pre-line;
+      text-align: left;
     }
 
-    .desafio {
-      font-size: 22px;
-      font-weight: bold;
-      background-color: #e0e0e0;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
   </style>
 </head>
 <body>
-  <header>FTM NA PRAÇA</header>
-  <div class="subtitulo">Stand de Psicologia</div>
-
-  <div class="container">
-    <div class="texto-simulacao" id="textoSimulado">
-      <!-- Texto disléxico aparece aqui -->
+  <div class="header">
+    <div class="logo-container">
+      <img src="logoftm.png" alt="Logo da Faculdade"> <!-- Aqui vai o link da sua logo -->
     </div>
-
-    <div class="desafio">
-      <p><strong>Pergunta:</strong> <span id="pergunta"></span></p>
+    <div>
+      <h1>FTM NA PRAÇA</h1>
+      <p>Simulação interativa de leitura com dislexia - Stand de Psicologia</p>
     </div>
+  </div>
+
+  <div class="content">
+    <div id="textoSimulado"></div>
   </div>
 
   <script src="script.js"></script>
